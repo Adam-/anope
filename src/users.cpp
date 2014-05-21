@@ -118,7 +118,7 @@ User* User::OnIntroduce(const Anope::string &snick, const Anope::string &sident,
 	// How IRCds handle collisions varies a lot, for safety well just always kill both sides
 	// With properly set qlines, this can almost never happen anyway
 
-	User *u = User::Find(snick);
+	User *u = User::Find(snick, true);
 	if (u)
 	{
 		Collide(u, !suid.empty() ? suid : snick, "Nick collision");
