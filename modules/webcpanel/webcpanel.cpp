@@ -22,6 +22,7 @@ class ModuleWebCPanel : public Module
 	WebCPanel::Logout logout;
 	WebCPanel::Register _register;
 	WebCPanel::Confirm confirm;
+	WebCPanel::ResetPass resetpass;
 
 	WebCPanel::NickServ::Info nickserv_info;
 	WebCPanel::NickServ::Cert nickserv_cert;
@@ -46,7 +47,7 @@ class ModuleWebCPanel : public Module
 	ModuleWebCPanel(const Anope::string &modname, const Anope::string &creator) : Module(modname, creator, EXTRA | VENDOR),
 		panel(this, "webcpanel"), id(this, "webcpanel_id"), ip(this, "webcpanel_ip"),
 		style_css("style.css", "/static/style.css", "text/css"), logo_png("logo.png", "/static/logo.png", "image/png"), cubes_png("cubes.png", "/static/cubes.png", "image/png"), favicon_ico("favicon.ico", "/favicon.ico", "image/x-icon"),
-		index("/"), logout("/logout"), _register("/register"), confirm("/confirm"),
+		index("/"), logout("/logout"), _register("/register"), confirm("/confirm"), resetpass("/resetpass"),
 		nickserv_info("NickServ", "/nickserv/info"), nickserv_cert("NickServ", "/nickserv/cert"), nickserv_access("NickServ", "/nickserv/access"), nickserv_alist("NickServ", "/nickserv/alist"),
 		chanserv_info("ChanServ", "/chanserv/info"), chanserv_set("ChanServ", "/chanserv/set"), chanserv_access("ChanServ", "/chanserv/access"), chanserv_akick("ChanServ", "/chanserv/akick"),
 		chanserv_modes("ChanServ", "/chanserv/modes"), chanserv_drop("ChanServ", "/chanserv/drop"), memoserv_memos("MemoServ", "/memoserv/memos"), hostserv_request("HostServ", "/hostserv/request"),

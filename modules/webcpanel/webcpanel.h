@@ -158,6 +158,7 @@ namespace WebPanel
 #include "pages/logout.h"
 #include "pages/register.h"
 #include "pages/confirm.h"
+#include "packages/resetpass.h"
 
 #include "pages/nickserv/info.h"
 #include "pages/nickserv/cert.h"
